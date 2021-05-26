@@ -6,11 +6,11 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 15:35:22 by prag              #+#    #+#             */
-/*   Updated: 2021/05/26 16:21:31 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/05/26 17:02:18 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *str, int c, size_t len)
+void	*ft_memset(void *str, int c, size_t len)
 {
 	size_t	k;
 	char	*p;
