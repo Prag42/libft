@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 22:41:58 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/05/27 01:21:06 by pmoorthy         ###   ########.fr       */
+/*   Created: 2021/05/27 01:21:45 by pmoorthy          #+#    #+#             */
+/*   Updated: 2021/05/27 01:23:57 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*srccast;
-	char	*dstcast;
-	size_t	i;
+	char	*tmp;
 
-	srccast = (char *)src;
-	dstcast = (char *)dst;
-	i = 0;
-	while (i < n)
-	{
-		dstcast[i] = srccast[i];
-		i++;
-	}
+	tmp = (char *)malloc(sizeof(char) * len);
+	if (tmp == NULL)
+		return (NULL);
+	ft_memcpy(tmp, src, len);
+	ft_memcpy(dst, tmp, len);
+	free(tmp);
 	return (dst);
 }
