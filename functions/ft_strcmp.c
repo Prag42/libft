@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 18:55:07 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/06/09 12:52:26 by pmoorthy         ###   ########.fr       */
+/*   Created: 2021/05/28 03:50:15 by pmoorthy          #+#    #+#             */
+/*   Updated: 2021/06/04 23:20:29 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void	*s,	size_t n)
+int	ft_strcmp(char *s1, char *s2)
 {
-	ft_memset(s, 0, n);
+	int	 i;
+
+	i = 0;
+	while (s1[i] != 0)
+	{
+		if (s1[i] < s2[i])
+			return (-1);
+		else if (s1[i] > s2[i])
+			return (1);
+		i++;
+	}
+	if (s2[i] == 0)
+		return (0);
+	else
+		return (-1);
 }
