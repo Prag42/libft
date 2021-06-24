@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   Untitled-1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 01:21:45 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/06/24 18:19:04 by pmoorthy         ###   ########.fr       */
+/*   Created: 2021/06/24 18:18:32 by pmoorthy          #+#    #+#             */
+/*   Updated: 2021/06/24 18:18:45 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_isprint(int c)
 {
-	char	*tmp;
-
-	tmp = (char *)malloc(sizeof(char) * len);
-	if (tmp == NULL)
-		return (NULL);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	free(tmp);
-	return (dst);
+	if (c >= ' ' && c <= '~')
+		return (1);
+	else
+		return (0);
 }
