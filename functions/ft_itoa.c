@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 22:28:22 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/07/03 20:26:55 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 20:33:57 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_itoa(int n)
 		hold[0] = '0';
 	while (num)
 	{
-		hold[i-- - 1] = '0' + num % 10);
+		hold[i-- - 1] = '0' + (num % 10);
 		num /= 10;
 	}
 	return (hold);
