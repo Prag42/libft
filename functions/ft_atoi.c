@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 17:14:40 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/07/03 19:30:22 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 19:39:12 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		i++;
 	}
-	while (str[i] != '\0')
+	while (ft_isdigit(str[i]))
 	{
 		res = res * 10 + str[i] - '0';
 		i++;
