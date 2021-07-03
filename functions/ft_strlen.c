@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 14:09:19 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/05/27 14:22:53 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 16:37:31 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ size_t	ft_strlen(const char *str)
 	{
 		len++;
 	}
-	return (strlen);
+	return (str[len]);
 }

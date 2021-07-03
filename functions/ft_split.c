@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 23:33:59 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/07/03 14:25:11 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 17:25:19 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,38 @@ int	ft_count(const char *s, char c)
 			index++;
 	}
 	return (words);
+}
+
+char	*ft_strncpy(char *dst, const char *src, size_t n)
+{
+	size_t	index;
+
+	if (!src && !dst)
+		return (0);
+	index = 0;
+	while (src[index] != '\0' && index < n)
+	{
+		dst[index] = src[index];
+		++index;
+	}
+	while (index < n)
+	{
+		dst[index] = '\0';
+		index++;
+	}
+	return (dst);
+}
+
+char	*ft_strndup(const char *s, size_t n)
+{
+	char	*str;
+
+	str = (char *)malloc(sizeof(char) * n + 1);
+	if (!str)
+		return (NULL);
+	str = ft_strncpy(str, s, n);
+	str[n] = '\0';
+	return (str);
 }
 
 char	**ft_split(const char *s, char c)

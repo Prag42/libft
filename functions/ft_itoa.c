@@ -6,17 +6,31 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 22:28:22 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/06/29 22:53:04 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 17:33:19 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	*ft_strcpy(char *dst, const char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+		dst[i] = '\0';
+	}
+	return (dst);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
 
-	str = (char *)malloc(sizeof(char) * 2)));
+	str = (char *)malloc(sizeof(char) * 2);
 	if (str == NULL)
 		return (NULL);
 	if (n == -2147483648)

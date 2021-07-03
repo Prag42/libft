@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:55:50 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/05/27 18:22:50 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 16:21:07 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	i;
+	size_t	i;
 
-	i = ft_strlen(str);
-	if (c == 0)
-		return ((char *)str + i);
-	while (i >= 0)
+	i = 0;
+	while (i < n)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i--;
+		if (((unsigned char *)src)[i] == (unsigned char)c)
+			return (src + i);
+		i++;
 	}
-	return (NULL);
+	return (0);
 }

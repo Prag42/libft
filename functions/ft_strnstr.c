@@ -6,9 +6,11 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:25:51 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/05/28 00:01:33 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 17:12:01 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strnstr(const char *str1, const char *str2, size_t n)
 {
