@@ -6,47 +6,53 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 22:28:22 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/07/03 20:06:59 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 20:26:23 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+int	ft_numlen(long n, int sign)
 {
-	size_t	i;
+	int	len;
 
-	i = 0;
-	while (src[i] != '\0')
+	len = 0;
+	if (sign < 0)
+		len = 1;
+	if (n == 0)
+		len += 1;
+	while (n)
 	{
-		dst[i] = src[i];
-		i++;
+		n /= 10;
+		len++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
+	int				i;
+	int				sign;
+	char			*hold;
+	long			num;
 
-	str = (char *)malloc(sizeof(char) * 2);
-	if (str == NULL)
+	sign = 1;
+	num = (long)n;
+	if (num < 0)
+		sign *= -1;
+	num *= sign;
+	i = ft_intlen(num, sign);
+	hold = ft_calloc(i + 1, 1);
+	if (!hold)
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
-	if (n < 0)
+	if (sign < 0)
+		hold[0] = '-';
+	if (n == 0)
+		hold[0] = '0';
+	while (num)
 	{
-		str[0] = '-';
-		str[1] = '\0';
-		str = ft_strjoin(str, ft_itoa(-n));
+		hold[i-- - 1] = '0' + num % 10);
+		num /= 10;
 	}
-	else if (n >= 10)
-		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	else if (n < 10 && n >= 0)
-	{
-		str[0] = n + '0';
-		str[1] = '\0';
-	}
-	return (str);
+	return (hold);
 }
