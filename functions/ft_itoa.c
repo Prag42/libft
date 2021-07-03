@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 22:28:22 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/07/03 20:26:23 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 20:26:55 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 	if (num < 0)
 		sign *= -1;
 	num *= sign;
-	i = ft_intlen(num, sign);
+	i = ft_numlen(num, sign);
 	hold = ft_calloc(i + 1, 1);
 	if (!hold)
 		return (NULL);
