@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 19:58:31 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/06/29 20:32:44 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 14:25:46 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	slen1 = ft_strlen(s1);
 	slen2 = ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (slen1 + slen2 + 1)));
+	str = (char *)malloc(sizeof(char) * (slen1 + slen2 + 1));
 	if (str == NULL)
 		return (NULL);
 	i = -1;
@@ -37,6 +37,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[slen1] = s2[i];
 		slen1++;
 	}
-	str[len1] = '\0';
+	str[slen1] = '\0';
 	return (str);
 }
