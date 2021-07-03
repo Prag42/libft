@@ -6,7 +6,7 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 22:28:22 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/07/03 17:33:19 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/03 20:06:59 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strcpy(char *dst, const char *src)
 	{
 		dst[i] = src[i];
 		i++;
-		dst[i] = '\0';
 	}
+	dst[i] = '\0';
 	return (dst);
 }
 
