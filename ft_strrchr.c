@@ -6,14 +6,14 @@
 /*   By: pmoorthy <pmoorthy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:55:50 by pmoorthy          #+#    #+#             */
-/*   Updated: 2021/07/04 01:57:48 by pmoorthy         ###   ########.fr       */
+/*   Updated: 2021/07/04 23:26:28 by pmoorthy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
-	{
+{
 	int	i;
 
 	i = 0;
